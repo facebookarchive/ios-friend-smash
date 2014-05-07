@@ -251,20 +251,30 @@ namespace FriendSmasher
                 m_Entries[i].labelName.text = [NSString stringWithFormat:@""];
                 m_Entries[i].labelName.hidden = YES;
                 
-                m_Entries[i].pProfileImageSprite->SetDraw(false);
-                delete m_Entries[i].pProfileImageSprite;
-                m_Entries[i].pProfileImageSprite = NULL;
+                if (m_Entries[i].pProfileImageSprite) {
+                    m_Entries[i].pProfileImageSprite->SetDraw(false);
+                    delete m_Entries[i].pProfileImageSprite;
+                    m_Entries[i].pProfileImageSprite = NULL;
+                }
                 
-
+                if (m_Entries[i].pUserTexture) {
+                    delete m_Entries[i].pUserTexture;
+                    m_Entries[i].pUserTexture = NULL;
+                }
                 
-                delete m_Entries[i].pUserTexture;
-                m_Entries[i].pUserTexture = NULL;
+                if (m_Entries[i].pCheckboxColdSprite) {
+                    m_Entries[i].pCheckboxColdSprite->SetDraw(false);
+                }
                 
-                m_Entries[i].pCheckboxColdSprite->SetDraw(false);
-                m_Entries[i].pCheckboxHotSprite->SetDraw(false);
+                if (m_Entries[i].pCheckboxHotSprite) {
+                    m_Entries[i].pCheckboxHotSprite->SetDraw(false);
+                }
                 
-                delete m_Entries[i].strID;
-                m_Entries[i].strID = NULL;
+                
+                if (m_Entries[i].strID) {
+                    delete m_Entries[i].strID;
+                    m_Entries[i].strID = NULL;
+                }
                 
                 m_Entries[i].bSelected = false;
             }
