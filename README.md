@@ -13,7 +13,7 @@ In particular, follow the 'Adding SDK & framework dependencies' section of the g
 ## Additional Resources
 
 Facebook SDK for iOS documentation can be found at https://developers.facebook.com/ios/
-Games Tutorial: https://developers.facebook.com/docs/guides/games/
+Games Tutorial: https://developers.facebook.com/docs/games/tutorials
 
 ## Contributing
 
