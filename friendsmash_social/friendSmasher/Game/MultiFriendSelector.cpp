@@ -200,7 +200,7 @@ namespace FriendSmasher
                 
                 std::string url = [friendImgUrl UTF8String];
 
-                m_Entries[i].labelName.text = [NSString stringWithFormat:friendName];
+                m_Entries[i].labelName.text = friendName;
                 m_Entries[i].labelName.hidden = NO;
                  
                 m_Entries[i].pUserTexture = new System::TextureResource();
@@ -232,7 +232,7 @@ namespace FriendSmasher
                 
                 u64 uFriendID = [friendId longLongValue];
                 
-                m_Entries[i].labelName.text = [NSString stringWithFormat:friendName];
+                m_Entries[i].labelName.text = friendName;
                 m_Entries[i].labelName.hidden = NO;
                 
                 m_Entries[i].pUserTexture = new System::TextureResource();
@@ -339,7 +339,7 @@ namespace FriendSmasher
                 }
             }
             
-            if ( (m_pMFSToggle_Invite && m_pMFSToggle_Invite->IsPointInside(vPosition, 10.f)) || (m_pMFSToggle_Request && m_pMFSToggle_Request->IsPointInside(vPosition, 10.f)) && !m_bPopulating)
+            if ( ((m_pMFSToggle_Invite && m_pMFSToggle_Invite->IsPointInside(vPosition, 10.f)) || (m_pMFSToggle_Request && m_pMFSToggle_Request->IsPointInside(vPosition, 10.f))) && !m_bPopulating)
             {
                 m_pMFSToggle_Invite->SetDraw(!m_pMFSToggle_Invite->GetDraw());
                 m_pMFSToggle_Request->SetDraw(!m_pMFSToggle_Request->GetDraw());
