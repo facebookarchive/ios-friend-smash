@@ -34,14 +34,14 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     
-    [FBAppCall handleOpenURL:url sourceApplication:sourceApplication fallbackHandler:^(FBAppCall *call) {
-        
-        if (call.appLinkData && call.appLinkData.targetURL) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:APP_HANDLED_URL object:call.appLinkData.targetURL];
-        }
-        
-    }];
-    
+    BFURL *parsedUrl = [BFURL URLWithInboundURL:url sourceApplication:sourceApplication];
+    if (parsedUrl.appLinkData) {
+        // This is AppLink traffic
+        NSURL *applinkTargetUrl = parsedUrl.targetURL;
+        [[NSNotificationCenter defaultCenter] postNotificationName:APP_HANDLED_URL object:applinkTargetUrl];
+    } else {
+        // Not an Applink URL, handle differently
+    }    
     return YES;
 }
 
@@ -64,7 +64,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-  [FBAppCall handleDidBecomeActive];
+    [FBAppCall handleDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
