@@ -120,7 +120,7 @@ namespace FriendSmasher
                 m_Entries[i].pCheckboxHotSprite->SetDraw(false);
                 
                 m_Entries[i].labelName = [[UILabel alloc] initWithFrame:CGRectMake((m_Entries[i].vPosition.x * 0.5 ) + 54.0, (m_Entries[i].vPosition.y * 0.5) - 6.0, 300, 30.0)];
-                m_Entries[i].labelName.textAlignment = UITextAlignmentLeft;
+                m_Entries[i].labelName.textAlignment = NSTextAlignmentLeft;
                 m_Entries[i].labelName.textColor = [UIColor colorWithRed:241.0/255.0 green:223.0/255.0 blue:204.0/255.0 alpha:1.0];
                 m_Entries[i].labelName.backgroundColor = [UIColor clearColor];
                 m_Entries[i].labelName.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(20.0)];

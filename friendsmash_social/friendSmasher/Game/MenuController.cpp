@@ -136,7 +136,7 @@ namespace FriendSmasher
             m_pBackgroundSprite = new System::Sprite(pBackgroundTextureResource);
             
             m_labelName = [[UILabel alloc] initWithFrame:CGRectMake(98.0, 34.0, 220.0, 100.0)];
-            m_labelName.textAlignment = UITextAlignmentLeft;
+            m_labelName.textAlignment = NSTextAlignmentLeft;
             m_labelName.textColor = [UIColor colorWithRed:241.0/255.0 green:223.0/255.0 blue:204.0/255.0 alpha:1.0];
             m_labelName.backgroundColor = [UIColor clearColor];
             m_labelName.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(28.0)];
@@ -147,7 +147,7 @@ namespace FriendSmasher
             m_labelName.hidden = NO;
             
             m_labelCoins = [[UILabel alloc] initWithFrame:CGRectMake(152.0, 78.0, 220.0, 100.0)];
-            m_labelCoins.textAlignment = UITextAlignmentLeft;
+            m_labelCoins.textAlignment = NSTextAlignmentLeft;
             m_labelCoins.textColor = [UIColor colorWithRed:241.0/255.0 green:223.0/255.0 blue:204.0/255.0 alpha:1.0];
             m_labelCoins.backgroundColor = [UIColor clearColor];
             m_labelCoins.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(28.0)];
@@ -158,7 +158,7 @@ namespace FriendSmasher
             m_labelCoins.hidden = YES;
             
             m_labelBombs = [[UILabel alloc] initWithFrame:CGRectMake(252.0, 78.0, 220.0, 100.0)];
-            m_labelBombs.textAlignment = UITextAlignmentLeft;
+            m_labelBombs.textAlignment = NSTextAlignmentLeft;
             m_labelBombs.textColor = [UIColor colorWithRed:241.0/255.0 green:223.0/255.0 blue:204.0/255.0 alpha:1.0];
             m_labelBombs.backgroundColor = [UIColor clearColor];
             m_labelBombs.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(28.0)];
@@ -169,7 +169,7 @@ namespace FriendSmasher
             m_labelBombs.hidden = YES;
             
             m_labelScore = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 120.0, 310.0, 100.0)];
-            m_labelScore.textAlignment = UITextAlignmentCenter;
+            m_labelScore.textAlignment = NSTextAlignmentCenter;
             m_labelScore.textColor = [UIColor colorWithRed:241.0/255.0 green:223.0/255.0 blue:204.0/255.0 alpha:1.0];
             m_labelScore.backgroundColor = [UIColor clearColor];
             m_labelScore.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(20.0)];
@@ -180,7 +180,7 @@ namespace FriendSmasher
             m_labelScore.hidden = YES;
             
             m_labelCoinsWon = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 144.0, 310.0, 100.0)];
-            m_labelCoinsWon.textAlignment = UITextAlignmentCenter;
+            m_labelCoinsWon.textAlignment = NSTextAlignmentCenter;
             m_labelCoinsWon.textColor = [UIColor colorWithRed:241.0/255.0 green:223.0/255.0 blue:204.0/255.0 alpha:1.0];
             m_labelCoinsWon.backgroundColor = [UIColor clearColor];
             m_labelCoinsWon.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(20.0)];
@@ -286,7 +286,7 @@ namespace FriendSmasher
                 m_pLeaderboardEntries[i].pStubSprite->SetPosition(Math::vec2((i%2==0) ? 128.f : 0.f, m_vLeaderboardPosition.y + (110.f * i)));
                 
                 m_pLeaderboardEntries[i].pFriendName = [[UILabel alloc] initWithFrame:CGRectMake(44.0, (m_vLeaderboardPosition.y * 0.5f) + -34.f + (55.f * i), 232.0, 100.0)];
-                m_pLeaderboardEntries[i].pFriendName.textAlignment = (i%2==0) ? UITextAlignmentRight : UITextAlignmentLeft;
+                m_pLeaderboardEntries[i].pFriendName.textAlignment = (i%2==0) ? NSTextAlignmentRight : NSTextAlignmentLeft;
                 m_pLeaderboardEntries[i].pFriendName.textColor = [UIColor colorWithRed:0.84 green:0.84 blue:0.84 alpha:1.0];
                 m_pLeaderboardEntries[i].pFriendName.backgroundColor = [UIColor clearColor];
                 m_pLeaderboardEntries[i].pFriendName.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(18.0)];
@@ -294,7 +294,7 @@ namespace FriendSmasher
                 m_pLeaderboardEntries[i].pFriendName.hidden = YES;
                 
                 m_pLeaderboardEntries[i].pFriendScore = [[UILabel alloc] initWithFrame:CGRectMake(44.0, (m_vLeaderboardPosition.y * 0.5f) + -14.f + (55.f * i), 232.0, 100.0)];
-                m_pLeaderboardEntries[i].pFriendScore.textAlignment = (i%2==0) ? UITextAlignmentRight : UITextAlignmentLeft;
+                m_pLeaderboardEntries[i].pFriendScore.textAlignment = (i%2==0) ? NSTextAlignmentRight : NSTextAlignmentLeft;
                 m_pLeaderboardEntries[i].pFriendScore.textColor = [UIColor colorWithRed:0.84 green:0.84 blue:0.84 alpha:1.0];
                 m_pLeaderboardEntries[i].pFriendScore.backgroundColor = [UIColor clearColor];
                 m_pLeaderboardEntries[i].pFriendScore.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(15.0)];

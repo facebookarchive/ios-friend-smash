@@ -96,7 +96,7 @@ namespace FriendSmasher
             m_pBackgroundSprite = new System::Sprite(pBackgroundTextureResource);
             
             m_labelFriendName = [[UILabel alloc] initWithFrame:CGRectMake(6.0, 0.0, 640.0, 34.0)];
-            m_labelFriendName.textAlignment = UITextAlignmentLeft;
+            m_labelFriendName.textAlignment = NSTextAlignmentLeft;
             m_labelFriendName.textColor = [UIColor colorWithRed:0.89 green:0.29 blue:0.14 alpha:1.0];
             m_labelFriendName.backgroundColor = [UIColor clearColor];
             m_labelFriendName.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(28.0)];
@@ -107,7 +107,7 @@ namespace FriendSmasher
             m_labelFriendName.shadowOffset = CGSizeMake(0,1);
             
             m_labelScore = [[UILabel alloc] initWithFrame:CGRectMake(214.0, 6.0, 100.0, 20.0)];
-            m_labelScore.textAlignment = UITextAlignmentRight;
+            m_labelScore.textAlignment = NSTextAlignmentRight;
             m_labelScore.textColor = [UIColor whiteColor];
             m_labelScore.backgroundColor = [UIColor clearColor];
             m_labelScore.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(20.0)];
