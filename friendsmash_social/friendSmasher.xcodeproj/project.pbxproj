@@ -114,7 +114,7 @@
 		A0E217371600DE7D00414F9E /* login_button.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E217361600DE7D00414F9E /* login_button.png */; };
 		A0E34437181D55B5008D7A38 /* bombbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E34436181D55B5008D7A38 /* bombbutton.png */; };
 		A0E3444118201169008D7A38 /* AlertDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0E3443F18201169008D7A38 /* AlertDialog.cpp */; };
-		DB8F0C7E1AB67A1100CE29AF /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8F0C7D1AB67A1100CE29AF /* FacebookSDK.framework */; };
+		DBE078F01AB9548E00A180C9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE078EF1AB9548E00A180C9 /* FacebookSDK.framework */; };
 		F9DEF42E172EE1B800A903E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DEF42D172EE1B800A903E0 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F9DEF43A172F194500A903E0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DEF439172F194500A903E0 /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -280,7 +280,7 @@
 		A0E217361600DE7D00414F9E /* login_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_button.png; sourceTree = "<group>"; };
 		A0E34436181D55B5008D7A38 /* bombbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bombbutton.png; sourceTree = "<group>"; };
 		A0E3443F18201169008D7A38 /* AlertDialog.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = AlertDialog.cpp; sourceTree = "<group>"; };
-		DB8F0C7D1AB67A1100CE29AF /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		DBE078EF1AB9548E00A180C9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		F9DEF42D172EE1B800A903E0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F9DEF439172F194500A903E0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -291,7 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A06CD9B218107AB3004DF823 /* MobileCoreServices.framework in Frameworks */,
-				DB8F0C7E1AB67A1100CE29AF /* FacebookSDK.framework in Frameworks */,
+				DBE078F01AB9548E00A180C9 /* FacebookSDK.framework in Frameworks */,
 				A06CD9A118107564004DF823 /* AudioToolbox.framework in Frameworks */,
 				A06CD9A518107599004DF823 /* CFNetwork.framework in Frameworks */,
 				A009E49815B578A8000604D1 /* CoreGraphics.framework in Frameworks */,
@@ -341,7 +341,7 @@
 		A009E49215B578A8000604D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DB8F0C7D1AB67A1100CE29AF /* FacebookSDK.framework */,
+				DBE078EF1AB9548E00A180C9 /* FacebookSDK.framework */,
 				A06CD9AE181076EC004DF823 /* libz.1.1.3.dylib */,
 				A06CD9AC1810765C004DF823 /* MobileCoreServices.framework */,
 				A06CD9AA1810762B004DF823 /* SystemConfiguration.framework */,
@@ -637,6 +637,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					A009E48E15B578A8000604D1 = {
+						DevelopmentTeam = MW52L8Y39L;
+					};
+				};
 			};
 			buildConfigurationList = A009E48915B578A8000604D1 /* Build configuration list for PBXProject "friendSmasher" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -854,9 +859,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/youminkim/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "friendSmasher/friendSmasher-Prefix.pch";
@@ -877,9 +884,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/youminkim/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "friendSmasher/friendSmasher-Prefix.pch";

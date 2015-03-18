@@ -41,8 +41,16 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:APP_HANDLED_URL object:applinkTargetUrl];
     } else {
         // Not an Applink URL, handle differently
-    }    
+    }
+    
+    [FBSession.activeSession handleOpenURL:url];
+
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [FBSession.activeSession handleOpenURL:url];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -64,6 +72,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    [FBAppEvents activateApp];
     [FBAppCall handleDidBecomeActive];
 }
 
