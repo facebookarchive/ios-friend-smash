@@ -10,29 +10,29 @@
 	<string>friendSmasher</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>ABC7E488-7510-4C16-AD3A-AD12E3C0F702</key>
-		<string>ssh://github.com/fbsamples/ios-friend-smash-v2.git</string>
+		<key>CEFBC1AD4E1651C7C3F04F8DC1B96DE71532E283</key>
+		<string>https://github.com/fbsamples/ios-friend-smash-v2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>friendsmash_social/friendSmasher.xcodeproj/project.xcworkspace</string>
+	<string>friendsmash_social/friendSmasher.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>ABC7E488-7510-4C16-AD3A-AD12E3C0F702</key>
+		<key>CEFBC1AD4E1651C7C3F04F8DC1B96DE71532E283</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/fbsamples/ios-friend-smash-v2.git</string>
+	<string>https://github.com/fbsamples/ios-friend-smash-v2.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>ABC7E488-7510-4C16-AD3A-AD12E3C0F702</string>
+	<string>CEFBC1AD4E1651C7C3F04F8DC1B96DE71532E283</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>ABC7E488-7510-4C16-AD3A-AD12E3C0F702</string>
+			<string>CEFBC1AD4E1651C7C3F04F8DC1B96DE71532E283</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ios-friend-smash-v2</string>
 		</dict>

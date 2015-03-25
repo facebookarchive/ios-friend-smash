@@ -70,7 +70,7 @@ namespace FriendSmasher
                                     nil];
             
             // Attempt to open the session. If the session is not open, show the user the Facebook login UX
-            [FBSession openActiveSessionWithReadPermissions:permissions allowLoginUI:true completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
+            [FBSession openActiveSessionWithReadPermissions:permissions allowLoginUI:YES completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
                 
                 // Did something go wrong during login? I.e. did the user cancel?
                 
@@ -141,7 +141,7 @@ namespace FriendSmasher
                  if (!error && result) {
                      // If so we can extract out the player's Facebook ID and first name
                      ms_nsstrFirstName = [[NSString alloc] initWithString:result.first_name];
-                     ms_uPlayerFBID =  [result.id longLongValue];
+                     ms_uPlayerFBID =  [result.objectID longLongValue];
                      
                      callback(true);
                  }
@@ -478,13 +478,12 @@ namespace FriendSmasher
             NSString *pictureURL = @"http://www.friendsmash.com/images/logo_large.jpg";
             
             // Prepare the native share dialog parameters
-            FBShareDialogParams *shareParams = [[FBShareDialogParams alloc] init];
+            FBLinkShareParams *shareParams = [[FBLinkShareParams alloc] init];
             shareParams.link = [NSURL URLWithString:linkURL];
             shareParams.name = @"Checkout my Friend Smash greatness!";
             shareParams.caption= @"Come smash me back!";
             shareParams.picture= [NSURL URLWithString:pictureURL];
-            shareParams.description =
-            [NSString stringWithFormat:@"I just smashed %d friends! Can you beat my score?", nScore];
+            shareParams.linkDescription = [NSString stringWithFormat:@"I just smashed %d friends! Can you beat my score?", nScore];
             
             if ([FBDialogs canPresentShareDialogWithParams:shareParams]){
                 

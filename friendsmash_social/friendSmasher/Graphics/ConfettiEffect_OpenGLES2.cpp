@@ -1,5 +1,6 @@
 #include "ConfettiEffect_OpenGLES2.h"
 #include "ShaderProgram.h"
+#include <stdlib.h>
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 

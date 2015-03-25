@@ -1,11 +1,11 @@
-# Friend Smash sample Facebook app
+# Friend Smash sample Facebook app 
 
-Authors: Ali Parr (aliparr)
+Authors: Ali Parr (aliparr), Youmin Kim (youminkim)
 
 ## Installing
 
-Before running the sample, please see the Getting Started on iOS guide, available here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/3.1/
-In particular, follow the 'Adding SDK & framework dependencies' section of the guide.
+Before running the sample, please see the Getting Started on iOS guide, available here: https://developers.facebook.com/docs/ios/getting-started
+In particular, follow the 'Adding SDK & framework dependencies' section of the guide. Note that this sample codes works with the Facebook iOS SDK 3.x version. 
 
 
 ## Documentation

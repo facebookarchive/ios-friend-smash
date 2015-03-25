@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+#include <stdlib.h>
 #include "SpriteManager.h"
 #include "Sprite.h"
 #include <algorithm>
@@ -398,7 +399,7 @@ namespace FriendSmasher
         
         void SpriteManager::SortList()
         {	
-            std::qsort( (void*)m_apSprites, m_uNumSprites, sizeof(Sprite*), qsortSpriteCompare );
+            qsort( (void*)m_apSprites, m_uNumSprites, sizeof(Sprite*), qsortSpriteCompare );
         }
         
         void SpriteManager::AddSprite(Sprite* pSprite)

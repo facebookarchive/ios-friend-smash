@@ -120,7 +120,7 @@ namespace FriendSmasher
                 m_Entries[i].pCheckboxHotSprite->SetDraw(false);
                 
                 m_Entries[i].labelName = [[UILabel alloc] initWithFrame:CGRectMake((m_Entries[i].vPosition.x * 0.5 ) + 54.0, (m_Entries[i].vPosition.y * 0.5) - 6.0, 300, 30.0)];
-                m_Entries[i].labelName.textAlignment = UITextAlignmentLeft;
+                m_Entries[i].labelName.textAlignment = NSTextAlignmentLeft;
                 m_Entries[i].labelName.textColor = [UIColor colorWithRed:241.0/255.0 green:223.0/255.0 blue:204.0/255.0 alpha:1.0];
                 m_Entries[i].labelName.backgroundColor = [UIColor clearColor];
                 m_Entries[i].labelName.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(20.0)];
@@ -200,7 +200,7 @@ namespace FriendSmasher
                 
                 std::string url = [friendImgUrl UTF8String];
 
-                m_Entries[i].labelName.text = [NSString stringWithFormat:friendName];
+                m_Entries[i].labelName.text = friendName;
                 m_Entries[i].labelName.hidden = NO;
                  
                 m_Entries[i].pUserTexture = new System::TextureResource();
@@ -232,7 +232,7 @@ namespace FriendSmasher
                 
                 u64 uFriendID = [friendId longLongValue];
                 
-                m_Entries[i].labelName.text = [NSString stringWithFormat:friendName];
+                m_Entries[i].labelName.text = friendName;
                 m_Entries[i].labelName.hidden = NO;
                 
                 m_Entries[i].pUserTexture = new System::TextureResource();
@@ -339,7 +339,7 @@ namespace FriendSmasher
                 }
             }
             
-            if ( (m_pMFSToggle_Invite && m_pMFSToggle_Invite->IsPointInside(vPosition, 10.f)) || (m_pMFSToggle_Request && m_pMFSToggle_Request->IsPointInside(vPosition, 10.f)) && !m_bPopulating)
+            if ( ((m_pMFSToggle_Invite && m_pMFSToggle_Invite->IsPointInside(vPosition, 10.f)) || (m_pMFSToggle_Request && m_pMFSToggle_Request->IsPointInside(vPosition, 10.f))) && !m_bPopulating)
             {
                 m_pMFSToggle_Invite->SetDraw(!m_pMFSToggle_Invite->GetDraw());
                 m_pMFSToggle_Request->SetDraw(!m_pMFSToggle_Request->GetDraw());

@@ -16,6 +16,7 @@
 
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <Bolts/Bolts.h>
 
 //#define NO_FACEBOOK_INTEGRATION
 

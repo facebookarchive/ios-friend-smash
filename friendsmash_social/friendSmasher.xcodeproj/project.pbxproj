@@ -114,7 +114,7 @@
 		A0E217371600DE7D00414F9E /* login_button.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E217361600DE7D00414F9E /* login_button.png */; };
 		A0E34437181D55B5008D7A38 /* bombbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E34436181D55B5008D7A38 /* bombbutton.png */; };
 		A0E3444118201169008D7A38 /* AlertDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0E3443F18201169008D7A38 /* AlertDialog.cpp */; };
-		A9D1FC6F190F7D4900A1AC9A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D1FC6E190F7D4900A1AC9A /* FacebookSDK.framework */; };
+		DBE078F01AB9548E00A180C9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE078EF1AB9548E00A180C9 /* FacebookSDK.framework */; };
 		F9DEF42E172EE1B800A903E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DEF42D172EE1B800A903E0 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F9DEF43A172F194500A903E0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DEF439172F194500A903E0 /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -280,7 +280,7 @@
 		A0E217361600DE7D00414F9E /* login_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_button.png; sourceTree = "<group>"; };
 		A0E34436181D55B5008D7A38 /* bombbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bombbutton.png; sourceTree = "<group>"; };
 		A0E3443F18201169008D7A38 /* AlertDialog.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = AlertDialog.cpp; sourceTree = "<group>"; };
-		A9D1FC6E190F7D4900A1AC9A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		DBE078EF1AB9548E00A180C9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		F9DEF42D172EE1B800A903E0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F9DEF439172F194500A903E0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -291,7 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A06CD9B218107AB3004DF823 /* MobileCoreServices.framework in Frameworks */,
-				A9D1FC6F190F7D4900A1AC9A /* FacebookSDK.framework in Frameworks */,
+				DBE078F01AB9548E00A180C9 /* FacebookSDK.framework in Frameworks */,
 				A06CD9A118107564004DF823 /* AudioToolbox.framework in Frameworks */,
 				A06CD9A518107599004DF823 /* CFNetwork.framework in Frameworks */,
 				A009E49815B578A8000604D1 /* CoreGraphics.framework in Frameworks */,
@@ -341,7 +341,7 @@
 		A009E49215B578A8000604D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A9D1FC6E190F7D4900A1AC9A /* FacebookSDK.framework */,
+				DBE078EF1AB9548E00A180C9 /* FacebookSDK.framework */,
 				A06CD9AE181076EC004DF823 /* libz.1.1.3.dylib */,
 				A06CD9AC1810765C004DF823 /* MobileCoreServices.framework */,
 				A06CD9AA1810762B004DF823 /* SystemConfiguration.framework */,
@@ -636,7 +636,12 @@
 		A009E48615B578A8000604D1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					A009E48E15B578A8000604D1 = {
+						DevelopmentTeam = MW52L8Y39L;
+					};
+				};
 			};
 			buildConfigurationList = A009E48915B578A8000604D1 /* Build configuration list for PBXProject "friendSmasher" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -790,9 +795,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -802,10 +814,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -814,15 +830,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -833,16 +859,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/aliparr/Documents/FacebookSDK_iOS_3_x_0,
-					/Users/marcoa/Documents/FacebookSDK,
+					/Users/youminkim/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "friendSmasher/friendSmasher-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "friendSmasher/friendSmasher-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				OTHER_LDFLAGS = (
 					"-lsqlite3.0",
 					"-ObjC",
@@ -857,16 +884,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/aliparr/Documents/FacebookSDK_iOS_3_x_0,
-					/Users/marcoa/Documents/FacebookSDK,
+					/Users/youminkim/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "friendSmasher/friendSmasher-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "friendSmasher/friendSmasher-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				OTHER_LDFLAGS = (
 					"-lsqlite3.0",
 					"-ObjC",

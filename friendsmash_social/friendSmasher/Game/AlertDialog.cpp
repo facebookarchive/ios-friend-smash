@@ -55,24 +55,24 @@ namespace FriendSmasher
             m_pNoButtonSprite->SetPosition(Math::vec2(360.f, 626.f));
             
             m_labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(108.0, 152.0, 220.0, 100.0)];
-            m_labelTitle.textAlignment = UITextAlignmentCenter;
+            m_labelTitle.textAlignment = NSTextAlignmentCenter;
             m_labelTitle.textColor = [UIColor colorWithRed:241.0/255.0 green:223.0/255.0 blue:204.0/255.0 alpha:1.0];
             m_labelTitle.backgroundColor = [UIColor clearColor];
             m_labelTitle.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(28.0)];
             [m_vc.view addSubview: m_labelTitle];
-            m_labelTitle.text = [NSString stringWithFormat:title];
+            m_labelTitle.text = title;
             m_labelTitle.shadowColor = [UIColor blackColor];
             m_labelTitle.shadowOffset = CGSizeMake(-1,1);
             m_labelTitle.hidden = YES;
             
             m_labelBody = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 220.0, 320.0, 100.0)];
-            m_labelBody.textAlignment = UITextAlignmentCenter;
+            m_labelBody.textAlignment = NSTextAlignmentCenter;
             m_labelBody.numberOfLines = 0;
             m_labelBody.textColor = [UIColor colorWithRed:241.0/255.0 green:223.0/255.0 blue:204.0/255.0 alpha:1.0];
             m_labelBody.backgroundColor = [UIColor clearColor];
             m_labelBody.font = [UIFont fontWithName:@"Avenir Next Condensed" size:(20.0)];
             [m_vc.view addSubview: m_labelBody];
-            m_labelBody.text = [NSString stringWithFormat:body];
+            m_labelBody.text = body;
             m_labelBody.shadowColor = [UIColor blackColor];
             m_labelBody.shadowOffset = CGSizeMake(-1,1);
             m_labelBody.hidden = YES;
