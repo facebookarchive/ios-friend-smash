@@ -19,6 +19,9 @@ namespace FriendSmasher
         
         static const u64 kuFBAppID = 480369938658210;
         
+        static NSString *const kFBCustomAppEventNameGamePlayed = @"game_played";
+        static NSString *const kFBCustomAppEventParamScore = @"score";
+        
         NSString* FacebookController::ms_nsstrFirstName = NULL;
         u64 FacebookController::ms_uPlayerFBID(0);
         bool FacebookController::ms_bIsLoggedIn = false;
@@ -596,6 +599,11 @@ namespace FriendSmasher
             }];
         }
         
+        void FacebookController::LogCustomAppEvent(const int nScore)
+        {
+            [FBAppEvents logEvent:kFBCustomAppEventNameGamePlayed
+                       parameters:@{ kFBCustomAppEventParamScore : [NSNumber numberWithInt:nScore] } ];
+        }
         
         void FacebookController::RequestWritePermissions()
         {

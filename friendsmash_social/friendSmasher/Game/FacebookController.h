@@ -75,6 +75,8 @@ namespace FriendSmasher
             static void SendAchievement(eGameAchievements achievement);
             static void GetScores(void (*callback)(NSArray*));
 
+            static void LogCustomAppEvent(const int nScore);
+            
             static void RequestWritePermissions();
             static void ReRequestFriendPermission();
             

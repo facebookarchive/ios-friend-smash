@@ -721,6 +721,7 @@ namespace FriendSmasher
                 }
             }
 #endif
+            FacebookController::LogCustomAppEvent(m_uCurrentScore);
             
             m_fsc->EndGame(m_friendName, m_uFriendFBID, m_uCurrentScore, m_uCoins, m_uBombsRemaining);
         }
