@@ -31,8 +31,10 @@
 
 // Send 'play' custom App event in every new game play
 // Read more available App Events: https://developers.facebook.com/docs/app-events/best-practices
-+(void)sendPlayEvent {
-    [FBSDKAppEvents logEvent:@"Play"];
++(void)sendPlayEvent: (double)score {
+    [FBSDKAppEvents logEvent:@"play_game"
+                  parameters:@{ @"score"   : [NSNumber numberWithDouble:score]}];
+
 }
 
 // Send Spent Credit App event in Coin spending to buy bombs

@@ -544,8 +544,6 @@ namespace FriendSmasher
         
         void MenuController::StartNewGame(bool bSocial)
         {
-            [FBAppEvents sendPlayEvent];
-            
             u32 uBombsToPlay = ms_uBombs > 3 ? 3 : ms_uBombs;
             m_fsc->StartNewGame(uBombsToPlay, bSocial);
             ms_uBombs -= uBombsToPlay;
@@ -757,6 +755,8 @@ namespace FriendSmasher
             ms_uBombs += uBombsRemaining;
             m_uScore = uScore;
             m_uLastFriendID = uFriendID;
+            
+            [FBAppEvents sendPlayEvent: uScore];
             
             m_labelScore.text = uScore == 1 ? [NSString stringWithFormat:@"You smashed %@ %u time!", friendName, uScore] : [NSString stringWithFormat:@"You smashed %@ %u times!", friendName, uScore];
             m_labelScore.hidden = NO;

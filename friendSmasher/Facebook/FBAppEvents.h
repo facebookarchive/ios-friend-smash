@@ -25,7 +25,7 @@
 @interface FBAppEvents : NSObject
 
 +(void)sendLaunchEvent;
-+(void)sendPlayEvent;
++(void)sendPlayEvent: (double)score;
 +(void)sendSpentCreditEvent: (double)number;
 
 @end
