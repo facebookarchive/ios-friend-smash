@@ -28,7 +28,6 @@
 id<FBSDKSharingDelegate> shareDialogDelegate;
 
 // The Graph API for scores lets game developers build social leaderboards and game-matching by storing players' scores as they play.
-// These scores will appear on players' timelines and in the Games Feed on Facebook.
 // https://developers.facebook.com/docs/games/scores
 +(void)sendScore: (int)score {
     
