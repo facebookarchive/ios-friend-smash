@@ -768,7 +768,7 @@ namespace FriendSmasher
 
             float fDistanceToMiddle = Random::GetRandom(200.f, 440.f) - pEntity->pSprite->GetPosition().x;
             
-            pEntity->vVelocity = Math::vec2(fDistanceToMiddle * Random::GetRandom(0.02f, 0.03f), Random::GetRandom(-42.f, -34.f));
+            pEntity->vVelocity = Math::vec2(fDistanceToMiddle * Random::GetRandom(0.02f, 0.03f)*System::Graphics::viewPortRatio, Random::GetRandom(-42.f, -34.f));
             
             m_nEntitiesSpawned++;
         }

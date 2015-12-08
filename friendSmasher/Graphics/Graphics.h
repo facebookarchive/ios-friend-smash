@@ -47,7 +47,7 @@ namespace FriendSmasher
 			
 			static void CreateInstance();
 
-			bool Initialise();
+			bool Initialise(int w, int h);
 			void Update();
 			bool Uninitialise();
 
@@ -77,6 +77,8 @@ namespace FriendSmasher
 			unsigned int		GetFrameBuffer() const;
             int                 GetBackbufferWidth() const;
             int                 GetBackbufferHeight() const;
+            
+            static float               viewPortRatio ;
 			
 		protected:
 
