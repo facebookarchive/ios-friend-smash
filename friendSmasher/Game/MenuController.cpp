@@ -49,11 +49,11 @@ namespace FriendSmasher
             }
         }
         
-        static void didProcessFBURL(NSString* challengeName, NSString* challengeFBID) {
-            if (kpMenuController) {
-                kpMenuController->DidProcessIncomingURL(challengeName, challengeFBID);
-            }
-        }
+//        static void didProcessFBURL(NSString* challengeName, NSString* challengeFBID) {
+//            if (kpMenuController) {
+//                kpMenuController->DidProcessIncomingURL(challengeName, challengeFBID);
+//            }
+//        }
         
         static void didFetchUserFriendsPermissionForStart(bool bSuccess) {
             if (kpMenuController) {
@@ -91,11 +91,11 @@ namespace FriendSmasher
             }
         }
 
-        static void didFetchScores(NSArray* scores) {
-            if (kpMenuController) {
-                kpMenuController->DidFetchScores(scores);
-            }
-        }
+//        static void didFetchScores(NSArray* scores) {
+//            if (kpMenuController) {
+//                kpMenuController->DidFetchScores(scores);
+//            }
+//        }
         
         u32 MenuController::ms_uBombs = 0;
         u32 MenuController::ms_uCoins = 30;
