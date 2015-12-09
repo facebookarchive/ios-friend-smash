@@ -26,6 +26,7 @@ namespace FriendSmasher
 	namespace System
 	{
 		Graphics* Graphics::ms_Instance = NULL;
+        float Graphics::viewPortRatio = 1.0f;
 
         Graphics* Graphics::Instance()
 		{
@@ -44,11 +45,13 @@ namespace FriendSmasher
 		{
 		}
         
-		bool Graphics::Initialise()
+		bool Graphics::Initialise(int w, int h)
 		{
 			FBAssert(ms_Instance);
             m_pSpriteManager = new SpriteManager();
 			ResetAll2DViewMatrices();
+            
+            viewPortRatio = (float)w / GetBackbufferWidth();
             
 			return true;
 		}
@@ -92,7 +95,7 @@ namespace FriendSmasher
 		{
             glClearColor(0.f, 0.f, 0.f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-            glViewport(0, 0, GetBackbufferWidth(), GetBackbufferHeight());
+            glViewport(0, 0, GetBackbufferWidth()*viewPortRatio, GetBackbufferHeight()*viewPortRatio);
 		}
 		
 		void Graphics::EndRender()

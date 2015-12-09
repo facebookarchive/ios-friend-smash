@@ -446,8 +446,13 @@ namespace FriendSmasher
             
             std::vector<EntityInstance*>::iterator itr = m_vecEntities.begin();
             std::vector<EntityInstance*>::iterator end = m_vecEntities.end();
+            
             for (; itr != end; ++itr)
             {
+                // to prevent race condition
+                if (m_vecEntities.size() == 0)
+                    break;
+                
                 EntityInstance* pCurrentEntity = *itr;
                 
                 if (pCurrentEntity->pSprite->IsPointInside(vPosition, 25.f))
@@ -481,8 +486,11 @@ namespace FriendSmasher
                         m_vecEntities.erase(std::remove(m_vecEntities.begin(), m_vecEntities.end(), pCurrentEntity), m_vecEntities.end());
                         
                         pCurrentEntity->pSprite->SetDraw(false);
-                        delete pCurrentEntity->pSprite;
-                        delete pCurrentEntity;
+                        if (pCurrentEntity != NULL && pCurrentEntity->pSprite != NULL)
+                            delete pCurrentEntity->pSprite;
+                        
+                        if (pCurrentEntity != NULL)
+                            delete pCurrentEntity;
                         
                         // If they start to score well, spawn extras
                         if ( !(m_uCurrentScore % 10) )
@@ -725,7 +733,6 @@ namespace FriendSmasher
         void GameController::SpawnEntity()
         {
             EntityInstance* pEntity = new EntityInstance;
-            m_vecEntities.push_back(pEntity);
             
             float fEntityType = Random::GetRandom(0.f, 100.f);
 
@@ -768,9 +775,10 @@ namespace FriendSmasher
 
             float fDistanceToMiddle = Random::GetRandom(200.f, 440.f) - pEntity->pSprite->GetPosition().x;
             
-            pEntity->vVelocity = Math::vec2(fDistanceToMiddle * Random::GetRandom(0.02f, 0.03f), Random::GetRandom(-42.f, -34.f));
+            pEntity->vVelocity = Math::vec2(fDistanceToMiddle * Random::GetRandom(0.02f, 0.03f)*System::Graphics::viewPortRatio, Random::GetRandom(-42.f, -34.f));
             
-            m_nEntitiesSpawned++;
+            m_vecEntities.push_back(pEntity);
+    m_nEntitiesSpawned++;
         }
     
     }

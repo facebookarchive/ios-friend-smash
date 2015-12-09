@@ -49,9 +49,12 @@ namespace FriendSmasher
 
         void FriendSmashController::OnEnter()
         {
-            Random::Seed();
-            System::Graphics::Instance()->Initialise();
+            int w = [[UIScreen mainScreen] nativeBounds].size.width;
+            int h = [[UIScreen mainScreen] nativeBounds].size.height;
             
+            Random::Seed();
+            System::Graphics::Instance()->Initialise(w,h);
+
             m_pMenuController->OnEnter();
         }
 
